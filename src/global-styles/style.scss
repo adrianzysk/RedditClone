@@ -1,0 +1,26 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--color-primary);
+  background-color: var(--background-color);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: inherit;
+  color: inherit;
+}

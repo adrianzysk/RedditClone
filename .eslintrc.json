@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "semi": "off",
+    "@typescript-eslint/semi": "off",
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "quotes": "off",
+    "@typescript-eslint/quotes": "off",
+    "@typescript-eslint/member-delimiter-style": "off"
+  }
+}
