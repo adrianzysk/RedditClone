@@ -1,0 +1,29 @@
+.main-container {
+  display: flex;
+  margin-top: 66px;
+}
+
+.dropdown-menu-container-desktop {
+  display: none;
+}
+
+.main-content-container {
+  margin-left: 323px;
+}
+
+.dropdown-menu-container-settings-box {
+  margin-top: 316px;
+}
+
+@media only screen and (min-width: 834px) {
+  .dropdown-menu-container-desktop {
+    padding-top: 34px;
+    top: initial;
+    position: fixed;
+    display: block;
+    height: calc(100% - 77px);
+  }
+  .main-container {
+    margin-top: 77px;
+  }
+}

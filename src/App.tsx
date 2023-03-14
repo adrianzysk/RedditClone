@@ -2,13 +2,13 @@ import React from "react";
 import { HomePage } from "@modules";
 import {
   NavBarGlobalComponent,
-  MenuGlobalComponent,
+  MainGlobalComponent,
 } from "@/global-components";
 
 const App: React.FC = () => (
   <>
     <NavBarGlobalComponent />
-    <MenuGlobalComponent />
+    <MainGlobalComponent />
   </>
 );
 

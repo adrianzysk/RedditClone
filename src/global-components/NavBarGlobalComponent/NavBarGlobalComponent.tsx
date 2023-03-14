@@ -30,16 +30,18 @@ export const NavBarGlobalComponent: React.FC = () => {
           <nav className="dropdown-menu-container">
             <ul>
               <h3 className="menu-heading">FEEDS</h3>
-              <li className="margin-bottom-50">
-                <div className="flex-container">
-                  <img
-                    src={flameBlack}
-                    className="menu-icon"
-                    alt="Popular icon"
-                  />
-                  <p className="menu-text">Popular</p>
-                </div>
-              </li>
+              <a href="#">
+                <li className="margin-bottom-50">
+                  <div className="flex-container">
+                    <img
+                      src={flameBlack}
+                      className="menu-icon"
+                      alt="Popular icon"
+                    />
+                    <p className="menu-text">Popular</p>
+                  </div>
+                </li>
+              </a>
               <h3 className="menu-heading">TOPICS</h3>
               {menuData.map((subMenu, index) => {
                 return (
