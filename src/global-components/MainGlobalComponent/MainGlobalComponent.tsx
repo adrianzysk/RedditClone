@@ -4,6 +4,7 @@ import flame from "@/assets/images/flame.png";
 import getAppIcon from "@/assets/images/getAppIcon.png";
 import { MenuIconDropdownComponent } from "@/global-components";
 import menuData from "@/assets/files/menuData.json";
+import { ImagesSection } from "@modules";
 
 export const MainGlobalComponent: React.FC = () => {
   const [activeIcon, setActiveIcon] = useState(-2);
@@ -65,70 +66,9 @@ export const MainGlobalComponent: React.FC = () => {
         </ul>
       </nav>
       <div className="main-content-container">
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={flame} className="logo" alt="Flame Icon" />
-            <h2>Popular</h2>
+        <div className="main-content-container-wrapper">
+          <div className="main-content-container-wrapped">
+            <ImagesSection />
           </div>
         </div>
       </div>

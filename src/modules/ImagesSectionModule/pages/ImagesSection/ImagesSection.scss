@@ -1,0 +1,44 @@
+.image-section-container {
+  display: none;
+}
+
+.image-container {
+  display: none;
+  position: relative;
+}
+
+.heading-main-section {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.image-section-image-container {
+  display: flex;
+  gap: 16px;
+}
+
+.show-two-images {
+  display: none;
+}
+
+@media only screen and (min-width: 834px) {
+  .image-section-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .show-two-images {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .show-three-images {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .show-four-images {
+    display: block;
+  }
+}

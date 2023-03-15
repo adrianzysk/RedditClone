@@ -3,7 +3,7 @@ import "./MenuIconDropdownComponent.scss";
 import arrow from "@/assets/images/arrow.png";
 
 interface MenuIconProps {
-  onShow: (event: any) => void;
+  onShow: (event: React.MouseEvent<HTMLElement>) => void;
   isActive: boolean;
   title: string;
   icon: string;

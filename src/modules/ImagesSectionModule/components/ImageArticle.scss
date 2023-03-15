@@ -1,0 +1,61 @@
+.image-gradient {
+  position: relative;
+}
+
+.image-gradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 215px;
+  background: linear-gradient(0deg, #000000 5.06%, rgba(0, 0, 0, 0) 184.18%);
+  opacity: 0.6;
+  border-radius: 10px;
+}
+
+.autor-position {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: #fff;
+  display: flex;
+  .avatar {
+    border-radius: 50%;
+    max-width: 22px;
+    max-height: 22px;
+  }
+  .autor-name {
+    margin: 0;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    margin-left: 6px;
+  }
+}
+
+.image {
+  width: 100%;
+  max-width: 241px;
+  height: 215px;
+  border: 0px solid transparent;
+  border-radius: 10px;
+}
+
+.description-position {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  .title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .description {
+    color: #9c9c9c;
+    font-size: 14px;
+    margin: 0;
+  }
+}
