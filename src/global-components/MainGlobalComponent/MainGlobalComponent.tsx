@@ -4,7 +4,7 @@ import flame from "@/assets/images/flame.png";
 import getAppIcon from "@/assets/images/getAppIcon.png";
 import { MenuIconDropdownComponent } from "@/global-components";
 import menuData from "@/assets/files/menuData.json";
-import { ImagesSection } from "@modules";
+import { ImagesSection, PostMenu, ArticlesSection } from "@modules";
 
 export const MainGlobalComponent: React.FC = () => {
   const [activeIcon, setActiveIcon] = useState(-2);
@@ -30,7 +30,7 @@ export const MainGlobalComponent: React.FC = () => {
             </li>
           </a>
           <h3 className="menu-heading">TOPICS</h3>
-          {menuData.map((subMenu, index) => {
+          {menuData?.map((subMenu, index) => {
             return (
               <MenuIconDropdownComponent
                 key={index}
@@ -65,13 +65,23 @@ export const MainGlobalComponent: React.FC = () => {
           </a>
         </ul>
       </nav>
-      <div className="main-content-container">
+      <main className="main-content-container">
         <div className="main-content-container-wrapper">
           <div className="main-content-container-wrapped">
             <ImagesSection />
+            <h1 className="heading-main-section margin-t-50 hide-mobile">
+              Popular Post
+            </h1>
+            <div className="articles-wrapper">
+              <div className="articles-wrapper-width">
+                <PostMenu />
+                <ArticlesSection />
+              </div>
+              <div className="aside-menu">ASIDE CONTENT</div>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

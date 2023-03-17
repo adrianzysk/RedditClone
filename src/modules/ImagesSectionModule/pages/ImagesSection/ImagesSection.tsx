@@ -13,7 +13,7 @@ import avatar4 from "@/assets/images/avatar4.jpg";
 export const ImagesSection: React.FC = () => {
   return (
     <section className="image-section-container">
-      <h3 className="heading-main-section">Trending today</h3>
+      <h1 className="heading-main-section">Trending today</h1>
       <div className="image-section-image-container">
         <div className="image-container show-two-images">
           <ImageArticle

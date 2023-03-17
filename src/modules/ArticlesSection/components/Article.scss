@@ -1,0 +1,125 @@
+.article-container {
+  display: flex;
+  padding: 18px 16px;
+  background-color: var(--white-color);
+}
+
+.votes-container {
+  margin-right: 16px;
+  &-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+  }
+  &-downicon {
+    background-image: var(--vote-down-icon);
+    &:hover,
+    &:active {
+      --vote-down-icon: url(src/assets/images/voteDownBlueIcon.png);
+    }
+  }
+  &-upicon {
+    background-image: var(--vote-up-icon);
+    &:hover,
+    &:active {
+      --vote-up-icon: url(src/assets/images/voteUpBlueIcon.png);
+    }
+  }
+  &-count {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-image {
+    border-radius: 10px;
+  }
+  &-text {
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    width: 100%;
+  }
+  &-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    margin-right: 10px;
+  }
+  &-avatarname {
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &-date {
+    line-height: 30px;
+    font-size: 12px;
+    color: #9c9c9c;
+  }
+  &-icons {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.content-container > * {
+  width: 100%;
+}
+
+.gap {
+  gap: 12px;
+}
+
+.menu-text {
+  font-size: 14px;
+  color: #9c9c9c;
+  margin-left: 4px;
+}
+
+@media only screen and (min-width: 834px) {
+  .article-container {
+    border: 1px solid #cecece;
+    border-radius: 8px;
+    padding: 24px;
+  }
+  .votes-container {
+    margin-right: 24px;
+    &-icon {
+      display: block;
+      width: 22px;
+      height: 22px;
+      background-size: 22px 22px;
+    }
+  }
+  .content-container {
+    gap: 24px;
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-image {
+      border-radius: 8px;
+    }
+    &-text {
+      font-size: 18px;
+    }
+    &-date {
+      font-size: 10px;
+    }
+  }
+}

@@ -11,6 +11,13 @@ body {
   background-color: var(--background-color);
 }
 
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
 a:hover {
   cursor: pointer;
 }

@@ -1,0 +1,28 @@
+[
+  {
+    "autor": "VideoGames",
+    "avatar": "src/assets/images/VideoGamesAvatar.png",
+    "date": "5 minutes ago",
+    "text": "What do you think about the new game based on the Harry Potter books and movies?",
+    "img": "src/assets/images/hogwartsArticle.jpg",
+    "votes": "10",
+    "commentsCount": "3"
+  },
+  {
+    "autor": "VideoGames",
+    "avatar": "src/assets/images/GreenAvatar.png",
+    "date": "7 minutes ago",
+    "text": "A probe is about to be sent into space. On board will be a disk and a computer with a message from humanity. What are you sending?",
+    "votes": "2",
+    "commentsCount": "1"
+  },
+  {
+    "autor": "VideoGames",
+    "avatar": "src/assets//images/MovieAvatar.png",
+    "date": "25 minutes ago",
+    "text": "What's your favorite shrek movie?",
+    "img": "src/assets/images/shrekArticle.jpg",
+    "votes": "33",
+    "commentsCount": "15"
+  }
+]

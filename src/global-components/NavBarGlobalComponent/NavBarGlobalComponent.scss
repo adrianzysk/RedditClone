@@ -7,6 +7,7 @@
   background-color: var(--white-color);
   border-bottom: 1px solid #e3e3e3;
   height: 65px;
+  z-index: 10;
 }
 
 .navBar-menu-container {
@@ -72,11 +73,11 @@
   height: 340px;
   overflow-y: overlay;
   &::-webkit-scrollbar {
-    width: 8px;
+    width: 22px;
   }
 
   &::-webkit-scrollbar-thumb {
-    border: 2px solid rgba(0, 0, 0, 0);
+    border: 6px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
     border-radius: 40px;
     background-color: #e3e3e3;
