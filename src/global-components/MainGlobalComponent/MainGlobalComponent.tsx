@@ -4,7 +4,7 @@ import flame from "@/assets/images/flame.png";
 import getAppIcon from "@/assets/images/getAppIcon.png";
 import { MenuIconDropdownComponent } from "@/global-components";
 import menuData from "@/assets/files/menuData.json";
-import { ImagesSection, PostMenu, ArticlesSection } from "@modules";
+import { ImagesSection, PostMenu, ArticlesSection, AsideMenu } from "@modules";
 
 export const MainGlobalComponent: React.FC = () => {
   const [activeIcon, setActiveIcon] = useState(-2);
@@ -73,11 +73,13 @@ export const MainGlobalComponent: React.FC = () => {
               Popular Post
             </h1>
             <div className="articles-wrapper">
-              <div className="articles-wrapper-width">
+              <div>
                 <PostMenu />
                 <ArticlesSection />
               </div>
-              <div className="aside-menu">ASIDE CONTENT</div>
+              <div className="aside-menu">
+                <AsideMenu />
+              </div>
             </div>
           </div>
         </div>

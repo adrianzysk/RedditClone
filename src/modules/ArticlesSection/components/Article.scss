@@ -52,8 +52,6 @@
   &-text {
     font-size: 16px;
     font-weight: 500;
-    display: inline-block;
-    width: 100%;
   }
   &-avatar {
     height: 30px;
@@ -85,8 +83,9 @@
   gap: 12px;
 }
 
-.menu-text {
+.content-container-text-bottom {
   font-size: 14px;
+  line-height: 24px;
   color: #9c9c9c;
   margin-left: 4px;
 }

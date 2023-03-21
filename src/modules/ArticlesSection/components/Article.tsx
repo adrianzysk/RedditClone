@@ -66,15 +66,17 @@ export const Article: React.FC<ArticleProps> = ({
                   className="content-container-icons"
                   src={commentsIcon}
                 ></img>
-                <p className="menu-text">{commentsCount} Comments</p>
+                <p className="content-container-text-bottom">
+                  {commentsCount} Comments
+                </p>
               </a>
               <a className="content-container-wrapper" href="#">
                 <img className="content-container-icons" src={shareIcon}></img>
-                <p className="menu-text">Share</p>
+                <p className="content-container-text-bottom">Share</p>
               </a>
               <a className="content-container-wrapper" href="#">
                 <img className="content-container-icons" src={saveIcon}></img>
-                <p className="menu-text">Save</p>
+                <p className="content-container-text-bottom">Save</p>
               </a>
             </div>
             <a href="#">

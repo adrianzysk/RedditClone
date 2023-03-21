@@ -1,5 +1,4 @@
 import React from "react";
-import { HomePage } from "@modules";
 import {
   NavBarGlobalComponent,
   MainGlobalComponent,

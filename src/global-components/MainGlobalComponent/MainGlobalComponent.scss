@@ -1,6 +1,5 @@
 .main-container {
   display: flex;
-  margin-top: 66px;
 }
 
 .dropdown-menu-container-desktop {
@@ -22,11 +21,6 @@
 .main-content-container {
   width: 100%;
 }
-
-.articles-wrapper-width {
-  width: 100%;
-}
-
 .margin-t-50 {
   margin-top: 50px;
 }
@@ -43,9 +37,6 @@
     display: block;
     height: calc(100% - 77px);
   }
-  .main-container {
-    margin-top: 77px;
-  }
   .main-content-container {
     margin: 50px 10px 24px 333px;
   }
@@ -60,16 +51,18 @@
   .hide-mobile {
     display: block;
   }
-  .articles-wrapper-width {
-    max-width: 654px;
-  }
 }
 
 @media only screen and (min-width: 1080px) {
-  .aside-menu {
-    display: block;
-  }
   .main-content-container {
     margin: 50px 50px 24px 373px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .aside-menu {
+    display: block;
+    min-width: 314px;
+    margin: 0 0 24px 50px;
   }
 }
