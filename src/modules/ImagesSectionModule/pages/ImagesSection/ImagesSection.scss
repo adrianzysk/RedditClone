@@ -1,21 +1,18 @@
-.image-section-container {
+.image-section {
   display: none;
-}
-
-.image-container {
-  display: none;
-  position: relative;
-}
-
-.heading-main-section {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
-
-.image-section-image-container {
-  display: flex;
-  gap: 18px;
+  &__heading {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  &__images-wrapper {
+    display: flex;
+    gap: 18px;
+  }
+  &__image-container {
+    display: none;
+    position: relative;
+  }
 }
 
 .show-two-images {
@@ -23,7 +20,7 @@
 }
 
 @media only screen and (min-width: 834px) {
-  .image-section-container {
+  .image-section {
     display: flex;
     flex-direction: column;
   }

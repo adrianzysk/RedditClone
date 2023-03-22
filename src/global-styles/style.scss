@@ -18,16 +18,21 @@ h3 {
   margin: 0;
 }
 
+a {
+  padding: 0;
+  margin: 0;
+}
+
 a:hover {
   cursor: pointer;
 }
 
 a:link {
   text-decoration: inherit;
-  color: inherit;
+  color: initial;
 }
 
 a:visited {
   text-decoration: inherit;
-  color: inherit;
+  color: initial;
 }

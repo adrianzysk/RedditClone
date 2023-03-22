@@ -17,17 +17,17 @@ export const ImageArticle: React.FC<ImageArticleProps> = ({
   description,
 }) => {
   return (
-    <a>
+    <a href="#">
       <div className="image-gradient">
         <img src={image} className="image" alt="article image" />
       </div>
-      <div className="autor-position">
-        <img src={icon} className="avatar" alt="Avatar" />
-        <p className="autor-name">{autor}</p>
+      <div className="autor">
+        <img src={icon} className="autor__avatar" alt="Avatar" />
+        <p className="autor__name">{autor}</p>
       </div>
-      <div className="description-position">
-        <h3 className="title">{title}</h3>
-        <p className="description">{description}</p>
+      <div className="description">
+        <h3 className="description__title">{title}</h3>
+        <p className="description__text">{description}</p>
       </div>
     </a>
   );

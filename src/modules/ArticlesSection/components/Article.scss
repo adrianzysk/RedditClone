@@ -6,7 +6,7 @@
 
 .votes-container {
   margin-right: 16px;
-  &-icon {
+  &__icon {
     display: block;
     width: 24px;
     height: 24px;
@@ -14,22 +14,22 @@
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
-  }
-  &-downicon {
-    background-image: var(--vote-down-icon);
-    &:hover,
-    &:active {
-      --vote-down-icon: url(src/assets/images/voteDownBlueIcon.png);
+    &--downicon {
+      background-image: var(--vote-down-icon);
+      &:hover,
+      &:active {
+        --vote-down-icon: url(src/assets/images/voteDownBlueIcon.png);
+      }
+    }
+    &--upicon {
+      background-image: var(--vote-up-icon);
+      &:hover,
+      &:active {
+        --vote-up-icon: url(src/assets/images/voteUpBlueIcon.png);
+      }
     }
   }
-  &-upicon {
-    background-image: var(--vote-up-icon);
-    &:hover,
-    &:active {
-      --vote-up-icon: url(src/assets/images/voteUpBlueIcon.png);
-    }
-  }
-  &-count {
+  &__count {
     font-size: 14px;
     font-weight: 500;
     margin: 10px auto;
@@ -42,63 +42,58 @@
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  &-wrapper {
+  &--gap {
+    gap: 12px;
+  }
+  &__wrapper {
     display: flex;
     justify-content: space-between;
   }
-  &-image {
+  &__image {
+    width: 100%;
     border-radius: 10px;
   }
-  &-text {
+  &__text {
     font-size: 16px;
     font-weight: 500;
   }
-  &-avatar {
+  &__avatar {
     height: 30px;
     width: 30px;
     border-radius: 30px;
     margin-right: 10px;
   }
-  &-avatarname {
+  &__avatarname {
     line-height: 30px;
     font-size: 14px;
     font-weight: 500;
   }
-  &-date {
+  &__date {
     line-height: 30px;
     font-size: 12px;
-    color: #9c9c9c;
+    color: var(--text-color);
   }
-  &-icons {
+  &__icons {
     width: 24px;
     height: 24px;
   }
-}
-
-.content-container > * {
-  width: 100%;
-}
-
-.gap {
-  gap: 12px;
-}
-
-.content-container-text-bottom {
-  font-size: 14px;
-  line-height: 24px;
-  color: #9c9c9c;
-  margin-left: 4px;
+  &__text-bottom {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--text-color);
+    margin-left: 4px;
+  }
 }
 
 @media only screen and (min-width: 834px) {
   .article-container {
-    border: 1px solid #cecece;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 24px;
   }
   .votes-container {
     margin-right: 24px;
-    &-icon {
+    &__icon {
       display: block;
       width: 22px;
       height: 22px;
@@ -107,17 +102,13 @@
   }
   .content-container {
     gap: 24px;
-    &-wrapper {
-      display: flex;
-      justify-content: space-between;
-    }
-    &-image {
+    &__image {
       border-radius: 8px;
     }
-    &-text {
+    &__text {
       font-size: 18px;
     }
-    &-date {
+    &__date {
       font-size: 10px;
     }
   }

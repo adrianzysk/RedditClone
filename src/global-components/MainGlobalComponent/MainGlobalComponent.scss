@@ -2,65 +2,106 @@
   display: flex;
 }
 
-.dropdown-menu-container-desktop {
+.dropdown-desktop {
   display: none;
-}
-
-.dropdown-menu-container-settings-box {
-  margin-top: 316px;
 }
 
 .aside-menu {
   display: none;
 }
 
-.articles-wrapper {
-  display: flex;
-}
-
-.main-content-container {
+.main-content {
   width: 100%;
-}
-.margin-t-50 {
-  margin-top: 50px;
-}
-
-.hide-mobile {
-  display: none;
+  &__heading {
+    display: none;
+  }
+  &__aside-menu {
+    display: none;
+  }
+  &__articles-wrapper {
+    display: flex;
+  }
 }
 
 @media only screen and (min-width: 834px) {
-  .dropdown-menu-container-desktop {
+  .dropdown-desktop {
+    background-color: var(--white-color);
     padding-top: 34px;
     top: initial;
     position: fixed;
     display: block;
-    height: calc(100% - 77px);
+    height: calc(100% - 112px);
+    width: 321px;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    overflow-y: overlay;
+    &::-webkit-scrollbar {
+      width: 22px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border: 6px solid rgba(0, 0, 0, 0);
+      background-clip: padding-box;
+      border-radius: 40px;
+      background-color: var(--thumb-color);
+    }
+    &__anchor {
+      padding: 6px 49px;
+      display: flex;
+      justify-content: flex-start;
+      &:hover {
+        background-color: var(--background-color);
+      }
+    }
+    &__icon {
+      max-width: 30px;
+      margin-right: 12px !important;
+      &--height {
+        max-height: 25px;
+      }
+    }
+    &__text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+    &__heading {
+      font-size: 12px;
+      color: var(--heading-color);
+      font-weight: 400;
+      margin: 50px 0 16px 49px;
+    }
+    &__settings {
+      margin-top: 316px;
+    }
   }
-  .main-content-container {
+  .main-content {
     margin: 50px 10px 24px 333px;
-  }
-  .main-content-container-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-  .main-content-container-wrapped {
-    max-width: 1018px;
-    width: 100%;
-  }
-  .hide-mobile {
-    display: block;
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    &__wrapped {
+      max-width: 1018px;
+      width: 100%;
+    }
+    &__heading {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21px;
+      display: block;
+      margin: 50px 0 24px;
+    }
   }
 }
 
 @media only screen and (min-width: 1080px) {
-  .main-content-container {
+  .main-content {
     margin: 50px 50px 24px 373px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .aside-menu {
+  .main-content__aside-menu {
     display: block;
     min-width: 314px;
     margin: 0 0 24px 50px;

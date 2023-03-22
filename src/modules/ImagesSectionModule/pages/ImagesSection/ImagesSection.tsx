@@ -12,10 +12,10 @@ import avatar4 from "@/assets/images/avatar4.jpg";
 
 export const ImagesSection: React.FC = () => {
   return (
-    <section className="image-section-container">
-      <h1 className="heading-main-section">Trending today</h1>
-      <div className="image-section-image-container">
-        <div className="image-container show-two-images">
+    <section className="image-section">
+      <h1 className="image-section__heading">Trending today</h1>
+      <div className="image-section__images-wrapper">
+        <div className="image-section__image-container show-two-images">
           <ImageArticle
             image={img1}
             autor={"Formula1"}
@@ -24,7 +24,7 @@ export const ImagesSection: React.FC = () => {
             description={"Meet the new painting from the formula"}
           />
         </div>
-        <div className="image-container show-two-images">
+        <div className="image-section__image-container show-two-images">
           <ImageArticle
             image={img2}
             autor={"Minecraft1234"}
@@ -35,7 +35,7 @@ export const ImagesSection: React.FC = () => {
             }
           />
         </div>
-        <div className="image-container show-three-images">
+        <div className="image-section__image-container show-three-images">
           <ImageArticle
             image={img3}
             autor={"Lola"}
@@ -46,7 +46,7 @@ export const ImagesSection: React.FC = () => {
             }
           />
         </div>
-        <div className="image-container show-four-images">
+        <div className="image-section__image-container show-four-images">
           <ImageArticle
             image={img4}
             autor={"NBA"}

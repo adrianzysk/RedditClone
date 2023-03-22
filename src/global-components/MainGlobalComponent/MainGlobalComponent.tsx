@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import "./MainGlobalComponent.scss";
-import flame from "@/assets/images/flame.png";
+import flameBlack from "@/assets/images/flameBlack.png";
 import getAppIcon from "@/assets/images/getAppIcon.png";
-import { MenuIconDropdownComponent } from "@/global-components";
 import menuData from "@/assets/files/menuData.json";
-import { ImagesSection, PostMenu, ArticlesSection, AsideMenu } from "@modules";
+import {
+  ImagesSection,
+  PostMenu,
+  ArticlesSection,
+  AsideMenu,
+  DropdownMenu,
+} from "@modules";
 
 export const MainGlobalComponent: React.FC = () => {
   const [activeIcon, setActiveIcon] = useState(-2);
@@ -18,21 +23,21 @@ export const MainGlobalComponent: React.FC = () => {
   };
   return (
     <div className="main-container">
-      <nav className="dropdown-menu-container dropdown-menu-container-desktop">
-        <ul>
-          <h3 className="menu-heading">FEEDS</h3>
-          <a href="#">
-            <li className="margin-bottom-50">
-              <div className="flex-container">
-                <img src={flame} className="menu-icon" alt="Popular icon" />
-                <p className="menu-text">Popular</p>
-              </div>
-            </li>
+      <nav className="dropdown-desktop">
+        <div>
+          <h3 className="dropdown-desktop__heading">FEEDS</h3>
+          <a href="#" className="dropdown-desktop__anchor">
+            <img
+              src={flameBlack}
+              className="dropdown-desktop__icon"
+              alt="Popular icon"
+            />
+            <p className="dropdown-desktop__text">Popular</p>
           </a>
-          <h3 className="menu-heading">TOPICS</h3>
+          <h3 className="dropdown-desktop__heading">TOPICS</h3>
           {menuData?.map((subMenu, index) => {
             return (
-              <MenuIconDropdownComponent
+              <DropdownMenu
                 key={index}
                 isActive={activeIcon === index}
                 onShow={() => handleActiveIcon(index)}
@@ -42,42 +47,36 @@ export const MainGlobalComponent: React.FC = () => {
               />
             );
           })}
-        </ul>
-        <ul className="dropdown-menu-container-settings-box">
-          <MenuIconDropdownComponent
+        </div>
+        <div className="dropdown-desktop__settings">
+          <DropdownMenu
             isActive={activeIcon === -1}
             onShow={() => handleActiveIcon(-1)}
             title={"Settings"}
             icon={"src/assets/images/settingIcon.png"}
             subMenu={["Profile", "Date"]}
           />
-          <a href="#">
-            <li className="margin-bottom-50">
-              <div className="flex-container">
-                <img
-                  src={getAppIcon}
-                  className="menu-icon"
-                  alt="Popular icon"
-                />
-                <p className="menu-text">Get app</p>
-              </div>
-            </li>
+          <a href="#" className="dropdown-desktop__anchor">
+            <img
+              src={getAppIcon}
+              className="dropdown-desktop__icon dropdown-desktop__icon--height"
+              alt="Popular icon"
+            />
+            <p className="dropdown-desktop__text">Get app</p>
           </a>
-        </ul>
+        </div>
       </nav>
-      <main className="main-content-container">
-        <div className="main-content-container-wrapper">
-          <div className="main-content-container-wrapped">
+      <main className="main-content">
+        <div className="main-content__wrapper">
+          <div className="main-content__wrapped">
             <ImagesSection />
-            <h1 className="heading-main-section margin-t-50 hide-mobile">
-              Popular Post
-            </h1>
-            <div className="articles-wrapper">
+            <h1 className="main-content__heading">Popular Post</h1>
+            <div className="main-content__articles-wrapper">
               <div>
                 <PostMenu />
                 <ArticlesSection />
               </div>
-              <div className="aside-menu">
+              <div className="main-content__aside-menu">
                 <AsideMenu />
               </div>
             </div>

@@ -14,18 +14,18 @@
   border-radius: 10px;
 }
 
-.autor-position {
+.autor {
   position: absolute;
   top: 16px;
   left: 16px;
-  color: #fff;
+  color: var(--white-color);
   display: flex;
-  .avatar {
+  &__avatar {
     border-radius: 50%;
     max-width: 22px;
     max-height: 22px;
   }
-  .autor-name {
+  &__name {
     margin: 0;
     font-size: 12px;
     line-height: 22px;
@@ -42,19 +42,19 @@
   border-radius: 10px;
 }
 
-.description-position {
+.description {
   position: absolute;
   bottom: 16px;
   left: 16px;
   right: 16px;
-  .title {
-    color: #fff;
+  &__title {
+    color: var(--white-color);
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 8px;
   }
-  .description {
-    color: #9c9c9c;
+  &__text {
+    color: var(--text-color);
     font-size: 14px;
     margin: 0;
   }

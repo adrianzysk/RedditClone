@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./MenuIconDropdownComponent.scss";
+import "./DropdownMenu.scss";
 import arrow from "@/assets/images/arrow.png";
 
-interface MenuIconProps {
+interface DropdownMenuProps {
   onShow: (event: React.MouseEvent<HTMLElement>) => void;
   isActive: boolean;
   title: string;
@@ -10,13 +10,13 @@ interface MenuIconProps {
   subMenu?: string[];
 }
 
-export const MenuIconDropdownComponent: React.FC<MenuIconProps> = ({
+export const DropdownMenu: React.FC<DropdownMenuProps> = ({
   onShow,
   isActive,
   title,
   icon,
   subMenu,
-}: MenuIconProps) => {
+}: DropdownMenuProps) => {
   const [isOn, setIsOn] = useState(-1);
 
   const style = {
@@ -29,14 +29,19 @@ export const MenuIconDropdownComponent: React.FC<MenuIconProps> = ({
   }, [isActive]);
 
   return (
-    <div className="padding-0">
-      <li onClick={onShow}>
+    <div className="dropdown-content">
+      <button className="dropdown-content__button" onClick={onShow}>
         <div className="flex-container">
-          <img src={icon} className="menu-icon" alt="Menu icon" />
-          <p className="menu-text">{title}</p>
+          <img src={icon} className="dropdown-content__icon" alt="Menu icon" />
+          <p className="dropdown-content__text">{title}</p>
         </div>
-        <img style={style} src={arrow} className="arrow" alt="Menu icon" />
-      </li>
+        <img
+          style={style}
+          src={arrow}
+          className="dropdown-content__arrow"
+          alt="Menu icon"
+        />
+      </button>
       <div>
         {isActive && (
           <ul>
@@ -44,13 +49,15 @@ export const MenuIconDropdownComponent: React.FC<MenuIconProps> = ({
               if (isOn === index) {
                 return (
                   <a href="#" key={index}>
-                    <li className="menu-item active-link">{menuItem}</li>
+                    <li className="dropdown-content__item dropdown-content__item--active">
+                      {menuItem}
+                    </li>
                   </a>
                 );
               } else {
                 return (
                   <a href="#" key={index} onClick={() => setIsOn(index)}>
-                    <li className="menu-item ">{menuItem}</li>
+                    <li className="dropdown-content__item ">{menuItem}</li>
                   </a>
                 );
               }

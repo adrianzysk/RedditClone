@@ -1,37 +1,39 @@
 .post-menu {
   background-color: var(--white-color);
   padding: 24px 16px 18px 16px;
-  &-heading {
+  &__heading {
     font-size: 24px;
     font-weight: 500;
   }
-  &-heading-small {
+  &__heading-small {
     font-size: 14px;
     font-weight: 500;
     margin: auto 6px;
-    color: #9c9c9c;
+    color: var(--text-color);
+    &--blue {
+      color: #3179cc;
+    }
   }
-  &-icon-big {
+  &__icon-big {
     width: 24px;
     height: 24px;
     margin: auto 0px;
   }
-  &-icon-small {
+  &__icon-small {
     width: 20px;
     height: 20px;
     margin: 2px 0;
   }
-  &-flex-container {
+  &__flex-container {
     display: flex;
     justify-content: space-between;
-    &-gap {
+    &--gap {
       gap: 16px;
     }
   }
-}
-
-.dropdown-country-menu-container {
-  position: relative;
+  &__anchor {
+    margin: auto 0px;
+  }
 }
 
 .dropdown-country-menu {
@@ -41,25 +43,29 @@
   width: 154px;
   height: 256px;
   background-color: var(--white-color);
-  border: 1px solid #cecece;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   overflow-y: overlay;
-  &-item {
+  &__item {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     color: #a8a8a8;
     padding: 8px 24px;
   }
-  &-item:hover {
+  &__item:hover {
     color: #3179cc;
   }
-  &-container {
+  &__menu-container {
+    position: relative;
     display: flex;
     flex-direction: column;
+    &--margin {
+      margin: 24px 0;
+    }
   }
   &::-webkit-scrollbar {
     width: 22px;
@@ -69,16 +75,8 @@
     border: 6px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
     border-radius: 40px;
-    background-color: #e3e3e3;
+    background-color: var(--thumb-color);
   }
-}
-
-.m-20 {
-  margin: 24px 0;
-}
-
-.heading-blue {
-  color: #3179cc;
 }
 
 .margin-t-24 {
@@ -89,11 +87,7 @@
   margin-left: 6px;
 }
 
-.anchor-margin {
-  margin: auto 0px;
-}
-
-.margin-l-8 {
+.blue-hover {
   margin-left: 8px;
 }
 
@@ -104,10 +98,10 @@
 
 .post-menu-desktop {
   display: none;
-  &-item {
+  &__item {
     box-sizing: border-box;
     padding: 6px 18px;
-    background-color: #f5f5f5;
+    background-color: var(--background-color);
     border-radius: 50px;
     font-size: 14px;
     color: #3179cc;
@@ -128,7 +122,7 @@
   .post-menu-desktop {
     display: block;
     padding: 15px 24px;
-    border: 1px solid #cecece;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
   }
   .post-menu-mobile {

@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./NavBarGlobalComponent.scss";
 import Hamburger from "hamburger-react";
 import flameBlack from "@/assets/images/flameBlack.png";
-import { MenuIconDropdownComponent } from "@/global-components";
+import { DropdownMenu } from "@modules";
 import menuData from "@/assets/files/menuData.json";
 
 export const NavBarGlobalComponent: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
   const [activeIcon, setActiveIcon] = useState(-1);
+
+  const handleEvent = () => {
+    if (isOpen) {
+      setOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("popstate", handleEvent);
+    return () => window.removeEventListener("popstate", handleEvent);
+  });
 
   const handleActiveIcon = (index: number) => {
     if (activeIcon === index) {
@@ -17,9 +28,25 @@ export const NavBarGlobalComponent: React.FC = () => {
     }
   };
 
+  function clickOutside(ref: React.MutableRefObject<HTMLElement | null>) {
+    useEffect(() => {
+      function handleClick(event: any) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setOpen(false);
+        }
+      }
+      document.addEventListener("mousedown", handleClick);
+      return () => {
+        document.removeEventListener("mousedown", handleClick);
+      };
+    }, [ref]);
+  }
+
+  const wrapperRef = useRef(null);
+  clickOutside(wrapperRef);
   return (
-    <header className="navBar-main-container">
-      <div className="navBar-menu-container">
+    <header ref={wrapperRef} className="navBar">
+      <div className="navBar__container">
         <div className="not-display-hamburger">
           <Hamburger toggled={isOpen} toggle={setOpen} size={19} />
         </div>
@@ -27,25 +54,24 @@ export const NavBarGlobalComponent: React.FC = () => {
           reddit
         </a>
         {isOpen && (
-          <nav className="dropdown-menu-container">
-            <ul>
-              <h3 className="menu-heading">FEEDS</h3>
-              <a href="#">
-                <li className="margin-bottom-50">
-                  <div className="flex-container">
-                    <img
-                      src={flameBlack}
-                      className="menu-icon"
-                      alt="Popular icon"
-                    />
-                    <p className="menu-text">Popular</p>
-                  </div>
-                </li>
+          <nav className="dropdown-container">
+            <div>
+              <h3 className="dropdown-container__heading">FEEDS</h3>
+              <a
+                className="dropdown-container__popular flex-container"
+                href="#"
+              >
+                <img
+                  src={flameBlack}
+                  className="dropdown-container__icon"
+                  alt="Popular icon"
+                />
+                <p className="dropdown-container__text">Popular</p>
               </a>
-              <h3 className="menu-heading">TOPICS</h3>
+              <h3 className="dropdown-container__heading">TOPICS</h3>
               {menuData.map((subMenu, index) => {
                 return (
-                  <MenuIconDropdownComponent
+                  <DropdownMenu
                     key={index}
                     isActive={activeIcon === index}
                     onShow={() => handleActiveIcon(index)}
@@ -55,18 +81,24 @@ export const NavBarGlobalComponent: React.FC = () => {
                   />
                 );
               })}
-            </ul>
+            </div>
           </nav>
         )}
       </div>
       <div className="input-container">
         <input type="text" name="search" placeholder="Search"></input>
       </div>
-      <div className="navBar-buttons-container">
-        <a href="#" className="buttons log-button">
+      <div className="navBar__buttons-container">
+        <a
+          href="#"
+          className="navBar__buttons-container__button navBar__buttons-container__button--log"
+        >
           <p>Log in</p>
         </a>
-        <a href="#" className="buttons register-button">
+        <a
+          href="#"
+          className="navBar__buttons-container__button navBar__buttons-container__button--register"
+        >
           <p>Register</p>
         </a>
       </div>
