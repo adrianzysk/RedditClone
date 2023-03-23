@@ -1,5 +1,9 @@
 # RedditClone
 
+(In progress)
+
+Clone of Reddit forum. Created on figma project. In future backend server will be added.
+
 ## How to run your project
 
 If you run your this project for the first time, you need to install npm dependencies by typing
