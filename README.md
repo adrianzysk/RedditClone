@@ -2,6 +2,8 @@
 
 (In progress)
 
+[Live](https://redclone.netlify.app/).
+
 Clone of Reddit forum. Created on figma project. In future backend server will be added.
 
 ## How to run your project
