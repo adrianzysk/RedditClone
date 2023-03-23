@@ -1,12 +1,12 @@
 import React from "react";
 import "./ArticlesSection.scss";
 import { Article } from "../../components/Article";
-import articlesData from "@/assets/files/articlesData.json";
+import { ArticlesData } from "../../../../assets/files/ArticlesData";
 
 export const ArticlesSection: React.FC = () => {
   return (
     <section className="articles-container">
-      {articlesData?.map((article, index) => {
+      {ArticlesData?.map((article, index) => {
         return (
           <Article
             key={index}

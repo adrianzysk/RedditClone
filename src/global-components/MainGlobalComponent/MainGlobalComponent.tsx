@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./MainGlobalComponent.scss";
 import flameBlack from "@/assets/images/flameBlack.png";
+import settingsIcon from "@/assets/images/settingIcon.png";
 import getAppIcon from "@/assets/images/getAppIcon.png";
-import menuData from "@/assets/files/menuData.json";
+import { MenuData } from "@/assets/files/MenuData";
 import {
   ImagesSection,
   PostMenu,
@@ -34,8 +35,10 @@ export const MainGlobalComponent: React.FC = () => {
             />
             <p className="dropdown-desktop__text">Popular</p>
           </a>
-          <h3 className="dropdown-desktop__heading">TOPICS</h3>
-          {menuData?.map((subMenu, index) => {
+          <h3 className="dropdown-desktop__heading dropdown-desktop__heading--margin">
+            TOPICS
+          </h3>
+          {MenuData?.map((subMenu, index) => {
             return (
               <DropdownMenu
                 key={index}
@@ -53,7 +56,7 @@ export const MainGlobalComponent: React.FC = () => {
             isActive={activeIcon === -1}
             onShow={() => handleActiveIcon(-1)}
             title={"Settings"}
-            icon={"src/assets/images/settingIcon.png"}
+            icon={settingsIcon}
             subMenu={["Profile", "Date"]}
           />
           <a href="#" className="dropdown-desktop__anchor">
@@ -70,7 +73,7 @@ export const MainGlobalComponent: React.FC = () => {
         <div className="main-content__wrapper">
           <div className="main-content__wrapped">
             <ImagesSection />
-            <h1 className="main-content__heading">Popular Post</h1>
+            <h1 className="main-content__heading">Popular post</h1>
             <div className="main-content__articles-wrapper">
               <div>
                 <PostMenu />

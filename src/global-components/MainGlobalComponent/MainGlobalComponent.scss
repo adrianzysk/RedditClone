@@ -26,7 +26,6 @@
 @media only screen and (min-width: 834px) {
   .dropdown-desktop {
     background-color: var(--white-color);
-    padding-top: 34px;
     top: initial;
     position: fixed;
     display: block;
@@ -68,10 +67,13 @@
       font-size: 12px;
       color: var(--heading-color);
       font-weight: 400;
-      margin: 50px 0 16px 49px;
+      margin: 50px 0 10px 49px;
+      &--margin {
+        margin-top: 46px;
+      }
     }
     &__settings {
-      margin-top: 316px;
+      margin-top: 303px;
     }
   }
   .main-content {
@@ -96,7 +98,7 @@
 
 @media only screen and (min-width: 1080px) {
   .main-content {
-    margin: 50px 50px 24px 373px;
+    margin: 50px 50px 24px 372px;
   }
 }
 

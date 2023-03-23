@@ -5,7 +5,7 @@
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    height: 42px;
+    height: 38px;
     width: 100%;
     padding: 0 32px;
     &:hover {
@@ -15,12 +15,12 @@
   &__text {
     font-size: 14px;
     font-weight: 500;
-    line-height: 42px;
+    line-height: 38px;
   }
   &__arrow {
     width: 20px;
     height: 20px;
-    margin: 11px 0;
+    margin: auto 0;
   }
   &__submenu {
     display: flex;

@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { fileURLToPath, URL } from "node:url";
-import eslint from 'vite-plugin-eslint';
+import eslint from "vite-plugin-eslint";
 
 const resolve = {
   alias: {

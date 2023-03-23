@@ -10,23 +10,21 @@
     display: block;
     width: 24px;
     height: 24px;
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
     overflow: hidden;
     &--downicon {
-      background-image: var(--vote-down-icon);
-      &:hover,
-      &:active {
-        --vote-down-icon: url(src/assets/images/voteDownBlueIcon.png);
-      }
+      transform: rotate(180deg);
     }
-    &--upicon {
-      background-image: var(--vote-up-icon);
-      &:hover,
-      &:active {
-        --vote-up-icon: url(src/assets/images/voteUpBlueIcon.png);
-      }
+    &--show-up {
+      display: none;
+    }
+    &--hide-up {
+      display: block;
+    }
+    &--show-down {
+      display: none;
+    }
+    &--hide-down {
+      display: block;
     }
   }
   &__count {
@@ -35,6 +33,21 @@
     margin: 10px auto;
     text-align: center;
   }
+}
+.votes-container__icon--hide-up:hover {
+  display: none;
+}
+
+.votes-container__icon--hide-up:hover + .votes-container__icon--show-up {
+  display: block;
+}
+
+.votes-container__icon--hide-down:hover {
+  display: none;
+}
+
+.votes-container__icon--hide-down:hover + .votes-container__icon--show-down {
+  display: block;
 }
 
 .content-container {
@@ -83,18 +96,20 @@
     color: var(--text-color);
     margin-left: 4px;
   }
+  &__anchor {
+    height: 24px;
+  }
 }
 
 @media only screen and (min-width: 834px) {
   .article-container {
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 24px;
+    padding: 23px;
   }
   .votes-container {
     margin-right: 24px;
     &__icon {
-      display: block;
       width: 22px;
       height: 22px;
       background-size: 22px 22px;
@@ -110,6 +125,9 @@
     }
     &__date {
       font-size: 10px;
+    }
+    &--gap {
+      gap: 18px;
     }
   }
 }

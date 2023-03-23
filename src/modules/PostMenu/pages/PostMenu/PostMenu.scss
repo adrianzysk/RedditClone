@@ -12,6 +12,7 @@
     color: var(--text-color);
     &--blue {
       color: #3179cc;
+      margin: auto 10px;
     }
   }
   &__icon-big {
@@ -28,11 +29,13 @@
     display: flex;
     justify-content: space-between;
     &--gap {
-      gap: 16px;
+      gap: 14px;
     }
   }
   &__anchor {
     margin: auto 0px;
+    display: block;
+    height: 24px;
   }
 }
 
@@ -89,11 +92,29 @@
 
 .blue-hover {
   margin-left: 8px;
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin: auto 0;
+  }
+  &__icon--show {
+    display: none;
+  }
+  &__icon--hide {
+    display: block;
+  }
+}
+
+.blue-hover:hover > .blue-hover__icon--show {
+  display: block;
+}
+
+.blue-hover:hover > .blue-hover__icon--hide {
+  display: none;
 }
 
 .blue-hover:hover > * {
   color: #3179cc;
-  --new-icon: url(src/assets/images/blueNewIcon.png);
 }
 
 .post-menu-desktop {
@@ -108,20 +129,10 @@
   }
 }
 
-.hover-icon {
-  width: 24px;
-  height: 24px;
-  background-size: 24px 24px;
-  background-image: var(--new-icon);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: auto 0;
-}
-
 @media only screen and (min-width: 834px) {
   .post-menu-desktop {
     display: block;
-    padding: 15px 24px;
+    padding: 15px 23px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
   }

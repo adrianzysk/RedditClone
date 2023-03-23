@@ -6,6 +6,8 @@ import arrowGrayIcon from "@/assets/images/arrowGrayIcon.png";
 import arrowIconBlue from "@/assets/images/arrowIconBlue.png";
 import moreGreyIcon from "@/assets/images/moreGreyIcon.png";
 import topIcon from "@/assets/images/topIcon.png";
+import newIcon from "@/assets/images/newIcon.png";
+import blueNewIcon from "@/assets/images/blueNewIcon.png";
 
 export const PostMenu: React.FC = () => {
   const [country, setCountry] = useState("Poland");
@@ -197,7 +199,14 @@ export const PostMenu: React.FC = () => {
               )}
             </div>
             <a className="post-menu__flex-container blue-hover">
-              <div className="hover-icon" />
+              <img
+                src={newIcon}
+                className="blue-hover__icon blue-hover__icon--hide"
+              />
+              <img
+                src={blueNewIcon}
+                className="blue-hover__icon blue-hover__icon--show"
+              />
               <h2 className="post-menu__heading-small">New</h2>
             </a>
             <a className="post-menu__flex-container blue-hover">

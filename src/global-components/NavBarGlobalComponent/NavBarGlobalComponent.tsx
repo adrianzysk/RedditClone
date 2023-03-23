@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import "./NavBarGlobalComponent.scss";
 import Hamburger from "hamburger-react";
 import flameBlack from "@/assets/images/flameBlack.png";
+import searchIcon from "@/assets/images/searchIcon.png";
 import { DropdownMenu } from "@modules";
-import menuData from "@/assets/files/menuData.json";
+import { MenuData } from "@/assets/files/MenuData";
 
 export const NavBarGlobalComponent: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
@@ -44,15 +45,18 @@ export const NavBarGlobalComponent: React.FC = () => {
 
   const wrapperRef = useRef(null);
   clickOutside(wrapperRef);
+
+  const style = {
+    backgroundImage: `url(${searchIcon})`,
+  };
+
   return (
     <header ref={wrapperRef} className="navBar">
       <div className="navBar__container">
         <div className="not-display-hamburger">
           <Hamburger toggled={isOpen} toggle={setOpen} size={19} />
         </div>
-        <a className="margin-left-desktop" href="#">
-          reddit
-        </a>
+        <a href="#">reddit</a>
         {isOpen && (
           <nav className="dropdown-container">
             <div>
@@ -69,7 +73,7 @@ export const NavBarGlobalComponent: React.FC = () => {
                 <p className="dropdown-container__text">Popular</p>
               </a>
               <h3 className="dropdown-container__heading">TOPICS</h3>
-              {menuData.map((subMenu, index) => {
+              {MenuData.map((subMenu, index) => {
                 return (
                   <DropdownMenu
                     key={index}
@@ -86,7 +90,7 @@ export const NavBarGlobalComponent: React.FC = () => {
         )}
       </div>
       <div className="input-container">
-        <input type="text" name="search" placeholder="Search"></input>
+        <input style={style} type="text" name="search" placeholder="Search" />
       </div>
       <div className="navBar__buttons-container">
         <a

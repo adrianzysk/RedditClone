@@ -17,7 +17,7 @@ export const ImageArticle: React.FC<ImageArticleProps> = ({
   description,
 }) => {
   return (
-    <a href="#">
+    <a className="image__anchor" href="#">
       <div className="image-gradient">
         <img src={image} className="image" alt="article image" />
       </div>

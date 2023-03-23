@@ -51,7 +51,7 @@ export const ImagesSection: React.FC = () => {
             image={img4}
             autor={"NBA"}
             icon={avatar4}
-            title={"LeBron James is less than 100 Points"}
+            title={"LeBron James is less than 100 POINTS"}
             description={
               "Kareem Abdul-Jabbar is the all-time scorer in the NBA"
             }
